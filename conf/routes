@@ -3,7 +3,12 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /                           web.Application.index
+
+# EC2 queries
+GET     /status                     web.Machines.status
+POST    /start                      web.Machines.start
+POST    /stop                       web.Machines.stop
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
