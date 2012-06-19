@@ -1,7 +1,17 @@
-@(message: String)
 
-@main("Welcome to Play 2.0") {
+@main("TeamSpeak server") {
 
-    @play20.welcome(message)
+  <h1>TeamSpeak Server</h1>
+
+  <div class="status">
+    <div class="current-ip"><input readonly></div>
+    <span class="name"></span>
+    <a class="ts-link"></a>
+  </div>
+
+  <div class="actions">
+    <button data-url="/start" class="action start">Start</button>
+    <button data-url="/stop" class="action stop">Stop</button>
+  </div>
 
 }

@@ -1,0 +1,73 @@
+
+body {
+  background: #222;
+  color: white;
+  padding-top: 4em;
+
+  #content {
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 1em;
+    margin: auto;
+    max-width: 400px;
+  }
+}
+
+body {
+
+  &.stopping, &.pending, &.stopped {
+    .current-ip { display: none; }
+
+    span.name {
+      color: #733;
+    }
+
+  }
+
+  &.stopped {
+    .actions .stop { display: none; }
+  }
+
+  &.stopping, &.pending {
+    .actions .action { display: none; }
+  }
+
+  &.running {
+    .current-ip {
+      text-align: center;
+
+      input {
+        border: 1px solid black;
+        padding: 1em;
+        font-size: 150%;
+        background: #efe;
+        text-align: center;
+      }
+    }
+
+    span.name {
+      color: green;
+    }
+
+    .actions .start { display: none; }
+  }
+}
+
+.status {
+
+  span.name {
+    display: block;
+    font-size: 140%;
+    padding: 1ex;
+  }
+
+}
+
+.actions {
+  padding-top: 2em;
+  .action {
+    //font-size: 110%;
+    padding: 0.2em 1em;
+  }
+}
