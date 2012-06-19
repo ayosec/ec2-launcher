@@ -9,6 +9,9 @@ updateStatus = ->
 
       $("body").attr "class", response.state
 
+      tsLink = "ts3server://#{response.ip}"
+      $("a.ts-link").attr("href", tsLink).text(tsLink)
+
       # Save state to prevent do the same when there is no changes
       lastState = response
 

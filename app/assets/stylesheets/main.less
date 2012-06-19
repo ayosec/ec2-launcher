@@ -18,6 +18,7 @@ body {
 
   &.stopping, &.pending, &.stopped {
     .current-ip { display: none; }
+    .ts-link { display: none; }
 
     span.name {
       color: #733;
@@ -56,6 +57,12 @@ body {
         text-align: center;
         font-family: monospace;
       }
+    }
+
+    .ts-link {
+      border-bottom: 1px dotted #44a;
+      color: #44a;
+      text-decoration: none;
     }
 
     span.name {
