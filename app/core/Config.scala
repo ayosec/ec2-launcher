@@ -6,4 +6,5 @@ object Config {
   final val eccInstance = System.getenv("EC_INSTANCE")
   final val backgroundURL = System.getenv("BG_URL")
   final val fontName = System.getenv("FONT_NAME")
+  final val appLabel = System.getenv("APP_LABEL")
 }
