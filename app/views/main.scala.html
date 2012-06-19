@@ -9,6 +9,22 @@
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
     <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
     <script src="@routes.Assets.at("javascripts/main.js")" type="text/javascript"></script>
+  @if(core.Config.backgroundURL) {
+    <style>
+      body {
+        background: url(@core.Config.backgroundURL) no-repeat top center black;
+        background-size: 100%;
+      }
+    </style>
+  }
+  @if(core.Config.fontName) {
+    <link href='http://fonts.googleapis.com/css?family=@core.Config.fontName:700' rel='stylesheet' type='text/css'>
+    <style>
+      body, button, input {
+        font-family: "@core.Config.fontName", sans;
+      }
+    </style>
+  }
   </head>
   <body>
     <div id="content">@content</div>
